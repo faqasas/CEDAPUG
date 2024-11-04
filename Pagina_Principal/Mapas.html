@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .slider input {
+            visibility: hidden;
+            display: none;
+        }
+
+        .buttons {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: 50px;
+            gap: 10px;
+        }
+
+        .buttons label {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            cursor: pointer;
+            z-index: 1;
+            transition: 300ms ease-in-out;
+        }
+
+        .buttons label:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        .slider input:nth-child(1):checked~.buttons label:nth-child(1),
+        .slider input:nth-child(2):checked~.buttons label:nth-child(2),
+        .slider input:nth-child(3):checked~.buttons label:nth-child(3),
+        .slider input:nth-child(4):checked~.buttons label:nth-child(4),
+        .slider input:nth-child(5):checked~.buttons label:nth-child(5) {
+            opacity: 1;
+            width: 40px;
+        }
+
+        .con {
+            position: relative;
+            width: 500vw;
+            display: flex;
+            transition: 400ms ease-in-out;
+        }
+
+        .firstslide,
+        .secondslide,
+        .thirdslide,
+        .fortslide,
+        .fivtslide {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .firstslide {
+            display: flex;
+            justify-content: flex-start;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .secondslide,
+        .thirdslide,
+        .fortslide,
+        .fivtslide {
+            background-color: black;
+        }
+
+        .slider input:nth-child(1):checked~.con {
+            left: 0;
+        }
+
+        .slider input:nth-child(2):checked~.con {
+            left: -100vw;
+        }
+
+        .slider input:nth-child(3):checked~.con {
+            left: -200vw;
+        }
+
+        .slider input:nth-child(4):checked~.con {
+            left: -300vw;
+        }
+
+        .slider input:nth-child(5):checked~.con {
+            left: -400vw;
+        }
+
+        nav {
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+            z-index: 100;
+            /* Aumentamos z-index */
+            position: relative;
+            /* Añadimos esto para que z-index funcione */
+        }
+
+
+        nav img {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav a {
+            color: #ffa500;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .contenido {
+            background-color: rgb(43, 41, 41);
+            padding: 10px;
+        }
+
+        .info-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .info-container img {
+            order: 2;
+        }
+
+        .info-container table {
+            color: white;
+            order: 1;
+        }
+
+        .info-table {
+            width: 25%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            /* Más bajo que el menú */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fondo más oscuro para mayor contraste */
+            color: white;
+            /* Texto blanco */
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(102, 102, 102);
+        }
+    </style>
+
+<body>
+    <div class="contenido">
+        <header>
+            <nav>
+                <img width="150px" src="https://cedapug.com/cedapug/images/CedaPug_NoGlow.png">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contactoss.html">FAQ</a></li>
+                    <li><a href="Stats.html">Stats</a></li>
+                    <li><a href="Report.html">Ratings / Report</a></li>
+                    <li><a href="Mapas.html">Maps</a></li>
+                    <li><a href="bans.html">Bans</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="slider">
+                <input type="radio" name="slider" id="sliderOne" checked>
+                <input type="radio" name="slider" id="sliderTwo">
+                <input type="radio" name="slider" id="sliderThree">
+                <input type="radio" name="slider" id="sliderFour">
+                <input type="radio" name="slider" id="sliderFive">
+
+                <div class="buttons">
+                    <label for="sliderOne"></label>
+                    <label for="sliderTwo"></label>
+                    <label for="sliderThree"></label>
+                    <label for="sliderFour"></label>
+                    <label for="sliderFive"></label>
+                </div>
+
+                <div class="con">
+                    <div class="firstslide">
+                        <div class="info-table">
+                            <h2>Información del Mapa</h2>
+                            <table>
+                                <tr>
+                                    <th>Nombre del Mapa</th>
+                                    <td>Dead Center</td>
+                                </tr>
+                                <tr>
+                                    <th>Dificultad</th>
+                                    <td>Media</td>
+                                </tr>
+                                <tr>
+                                    <th>Ubicación</th>
+                                    <td>Centro Comercial</td>
+                                </tr>
+                                <tr>
+                                    <th>Número de Niveles</th>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración Estimada</th>
+                                    <td>35 minutos</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <img width="450px" src="map1.webp">
+                    </div>
+
+                    <div class="secondslide">
+                        <div class="info-table">
+                            <h2>Información del Mapa</h2>
+                            <table>
+                                <tr>
+                                    <th>Nombre del Mapa</th>
+                                    <td>Swamp Fever</td>
+                                </tr>
+                                <tr>
+                                    <th>Dificultad</th>
+                                    <td>Difícil</td>
+                                </tr>
+                                <tr>
+                                    <th>Ubicación</th>
+                                    <td>Pantano</td>
+                                </tr>
+                                <tr>
+                                    <th>Número de Niveles</th>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración Estimada</th>
+                                    <td>40 minutos</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <img width="450px" src="map2.jpg">
+                    </div>
+
+                    <div class="thirdslide">
+                        <div class="info-container">
+                            <table>
+                                <tr>
+                                    <th>Nombre del Mapa</th>
+                                    <td>Hard Rain</td>
+                                </tr>
+                                <tr>
+                                    <th>Dificultad</th>
+                                    <td>Media</td>
+                                </tr>
+                                <tr>
+                                    <th>Ubicación</th>
+                                    <td>Ciudad Lluviosa</td>
+                                </tr>
+                                <tr>
+                                    <th>Número de Niveles</th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración Estimada</th>
+                                    <td>45 minutos</td>
+                                </tr>
+                            </table>
+                            <img width="450px" src="map3.webp">
+                        </div>
+                    </div>
+
+                    <div class="fortslide">
+                        <div class="info-container">
+                            <table>
+                                <tr>
+                                    <th>Nombre del Mapa</th>
+                                    <td>The Parish</td>
+                                </tr>
+                                <tr>
+                                    <th>Dificultad</th>
+                                    <td>Alta</td>
+                                </tr>
+                                <tr>
+                                    <th>Ubicación</th>
+                                    <td>Ciudad Abandonada</td>
+                                </tr>
+                                <tr>
+                                    <th>Número de Niveles</th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración Estimada</th>
+                                    <td>50 minutos</td>
+                                </tr>
+                            </table>
+                            <img width="450px" src="map4.webp">
+                        </div>
+                    </div>
+
+                    <div class="fivtslide">
+                        <div class="info-container">
+                            <table>
+                                <tr>
+                                    <th>Nombre del Mapa</th>
+                                    <td>No Mercy</td>
+                                </tr>
+                                <tr>
+                                    <th>Dificultad</th>
+                                    <td>Alta</td>
+                                </tr>
+                                <tr>
+                                    <th>Ubicación</th>
+                                    <td>Hospital</td>
+                                </tr>
+                                <tr>
+                                    <th>Número de Niveles</th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración Estimada</th>
+                                    <td>40 minutos</td>
+                                </tr>
+                            </table>
+                            <img width="450px" src="map5.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

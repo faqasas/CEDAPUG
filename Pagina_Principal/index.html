@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        nav {
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+
+        nav img {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10;
+            margin: 100;
+            display: flex;
+        }
+
+        nav a {
+            Color: #ffa500;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .contenido {
+            background-color: rgb(43, 41, 41);
+            padding: 10px;
+        }
+
+        table {
+            width: 50%;
+            /* flex-direction: column;
+            justify-content: flex-start; */
+            background-color: rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 2px solid rgb(83, 82, 82);
+            text-align: center;
+            Color: #ffffff;
+            padding: 50px;
+        }
+
+        strong {
+            color: orange;
+        }
+
+        .xd {
+            display: flex;
+        }
+
+        /* strong{
+            color:blue;
+        }  */
+        .blue {
+            color: rgb(53, 53, 252);
+        }
+
+        .blanco {
+            color: white;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .violeta {
+            color: violet;
+        }
+
+        h1 {
+
+            text-align: center;
+            padding: 10px;
+            transform: translateX(-25%);
+            /* esto hace que del centro reste un 25% menos */
+        }
+
+        .pp {
+            background-color: rgb(0, 0, 0);
+            padding: 5px;
+            border: 2px solid rgb(83, 82, 82);
+            display: flex;
+        }
+
+        .message-input {
+            margin-top: 10px;
+        }
+
+        .message-input input {
+            width: calc(100% - 60px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .message-input button {
+            width: 50px;
+            padding: 10px;
+            background-color: rgb(83, 82, 82);
+            border: none;
+            border-radius: 5px;
+            color: rgb(255, 254, 254);
+            cursor: pointer;
+        }
+
+        .message-input button:hover {
+            background-color: #ffffff;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .amarillo {
+            color: yellow;
+        }
+        .gris{
+            color: gray;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mover{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenido">
+        <header>
+            <nav>
+                <img width="150px" src="https://cedapug.com/cedapug/images/CedaPug_NoGlow.png">
+                <ul>
+
+                    <li><a href="contactoss.html">FAQ</a></li>
+                    <li><a href="Stats.html">Stats</a></li>
+                    <li><a href="Report.html">Ratings / Report</a></li>
+                    <li><a href="Mapas.html">Maps</a></li>
+                    <li><a href="bans.html">Bans</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <br>
+        <div class="xd">
+            <table>
+                <tr>
+                    <td>
+                        <h2>What is CedaPug?</h2>
+                        <h4>CEDAPug is a <strong>pick-up game</strong> website for <span class="blue">Left 4 Dead
+                                2</span> </h4>
+                        <h4>Read the <span class="blue">Get Started</span>, FAQ and <span class="blue">Queues</span>
+                            pages before joining queues.</h4>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>Simply <span class="blue">sign in</span> through steam and you can enter in a queue for a
+                        pug.<br><br> <a
+                            href="https://steamcommunity.com/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2Fcedapug.com%2F%3Flogin&openid.realm=https%3A%2F%2Fcedapug.com&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select"
+                            target="_blank">
+                            <img
+                                src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png">
+                        </a>
+
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+        <br>
+        
+
+        <div class="header-section">
+            <h1 class="mover"><span class="blanco">Global chat</span></h1>
+            <h1><span class="blanco">Online: 520</span></h1>
+        </div>
+        <div class="pp">
+            <table>
+                <tr>
+                    <h5> <span class="blue">Insane : </span><span class="blanco">trio de chiteros</span></h5>
+                    <h5> <span class="red">z4ne :</span> <span class="blanco">no</span></h5>
+                    <h5> <span class="blue">Insane :</span><span class="blanco">conchadetumadre</span> </h5>
+                    <h5> <span class="blanco">Seii :</span> <span class="blanco">jaajaj</span></h5>
+                    <h5> <span class="red">z4ne :</span> <span class="blanco">wacala</span></h5>
+                    <h5> <span class="violeta">Gniee :</span> <span class="blanco">xd</span></h5>
+                </tr>
+            </table>
+
+           
+
+            <table>
+                <ul>
+                    <li><span class="blanco">Shane</span> <span class="gris">[</span><span class="red">3218</span><span
+                            class="gris">]</span></li>
+                    <li><span class="blanco">rinnenganuser</span> <span class="gris">[</span><span
+                            class="red">3145</span><span class="gris">]</span></li>
+                    <li><span class="blanco">soyeon</span> <span class="gris">[</span><span class="red">2950</span><span
+                            class="gris">]</span></li>
+                    <li><span class="blanco">Saitama</span> <span class="gris">[</span><span
+                            class="red">2898</span><span class="gris">]</span></li>
+                    <li><span class="blanco">inside</span> <span class="gris">[</span><span
+                            class="amarillo">1859</span><span class="gris">]</span></li>
+                    <li><span class="blanco">zakyn</span> <span class="gris">[</span><span class="red">2857</span><span
+                            class="gris">]</span></li>
+                    <li><span class="blanco">lmao</span> <span class="gris">[</span><span class="verde">826</span><span
+                            class="gris">]</span></li>
+                    <li><span class="blanco">SrTuxas</span> <span class="gris">[</span><span
+                            class="red">2814</span><span class="gris">]</span></li>
+
+                </ul>
+
+            </table>
+        </div>
+        <div class="message-input">
+            <input type="text" placeholder="Write a message...">
+            <button type="submit">Send</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Baneos</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #searchBox {
+            width: 40%;
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            border: 1px solid #ffcc00;
+            background-color: #333;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ffcc00;
+            color: #121212;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ffb700;
+        }
+
+        .ban-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .ban-table thead th {
+            background-color: #ffcc00;
+            color: black;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .ban-table tbody td {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .ban-table tbody tr:hover {
+            background-color: #444;
+        }
+
+        .ban-table td {
+            border: 1px solid #555;
+        }
+
+        nav {
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+
+        nav img {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10;
+            margin: 100;
+            display: flex;
+        }
+
+        nav a {
+            Color: #ffa500;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img width="150px" src="https://cedapug.com/cedapug/images/CedaPug_NoGlow.png">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contactoss.html">FAQ</a></li>
+                <li><a href="Stats.html">Stats</a></li>
+                <li><a href="Report.html">Ratings / Report</a></li>
+                <li><a href="Mapas.html">Maps</a></li>
+                <li><a href="bans.html">Bans</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header>
+            <h1>CEDA PUG - Lista de Baneos</h1>
+        </header>
+        <div class="search-container">
+            <input type="text" placeholder="SteamID" id="searchBox">
+            <button>Buscar</button>
+        </div>
+        <table class="ban-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>SteamID</th>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th>Razón</th>
+                    <th>Baneado por</th>
+                    <th>Desbaneado por</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PK</td>
+                    <td>76561198043679674</td>
+                    <td>2024-10-18 01:02:27</td>
+                    <td>2024-10-18 04:02:27</td>
+                    <td>[ROBOCOP] Left the game before it was finished.</td>
+                    <td>ROBOCOP</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>tokyo</td>
+                    <td>76561199163575495</td>
+                    <td>2024-10-18 00:57:50</td>
+                    <td>2024-10-18 03:57:50</td>
+                    <td>[ROBOCOP] Left the game before it was finished.</td>
+                    <td>ROBOCOP</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>cusco</td>
+                    <td>76561198274628471</td>
+                    <td>2024-10-18 00:53:02</td>
+                    <td>2024-10-19 00:53:02</td>
+                    <td>[ROBOCOP] Left the game before it was finished.</td>
+                    <td>ROBOCOP</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>Ghl_klm</td>
+                    <td>76561199396937601</td>
+                    <td>2024-10-18 00:46:57</td>
+                    <td>2024-10-18 03:46:57</td>
+                    <td>[ROBOCOP] Left the game before it was finished.</td>
+                    <td>ROBOCOP</td>
+                    <td>--</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
